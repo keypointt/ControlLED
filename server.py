@@ -18,7 +18,8 @@ db = client.local
 
 @app.route('/')
 def hello_world():
-    return 'Hello, World'
+    #return 'Hello, World
+    return render_template('index.html', name="index")
 
 # eg: http://localhost:5000/status?udid=d1
 @app.route('/status')
