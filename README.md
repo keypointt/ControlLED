@@ -15,7 +15,7 @@ flask run --host=0.0.0.0
 
 ### Flask Server deployment
 
-1. spin up ec2 instance (CentOS community version)
+1. spin up ec2 instance (Amazon Linux)
 2. get `.pem` key
 3. `ssh -i /Users/xinr/Downloads/sapHackathon.pem root@ec2-54-xx-x-xxx.us-west-2.compute.amazonaws.com` 
 4. setup Mongo on centOS: https://docs.mongodb.com/manual/tutorial/install-mongodb-on-red-hat/
@@ -26,6 +26,11 @@ flask run --host=0.0.0.0
 (`@note`: user name is `root`, not `centos`. aws turotial is wrong at http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/AccessingInstancesLinux.html)
 
 http://flask.pocoo.org/docs/0.12/deploying/#deployment
+
+### Nginx Server deployment
+1. `sudo yum install nginx`
+2. `sudo /etc/init.d/nginx start`
+
 
 ## Client
 
