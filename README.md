@@ -1,3 +1,8 @@
+## Usage
+
+1. ngnix server up
+2. flask server up
+3. mongod up
 
 ## Server - Flask
 
@@ -31,7 +36,9 @@ http://flask.pocoo.org/docs/0.12/deploying/#deployment
 ### Nginx Server deployment
 1. `sudo yum install nginx`
 2. `sudo /etc/init.d/nginx start`
+3. nginx will redirect requests to localhost(127.0.0.1)
 
+Ref: http://vladikk.com/2013/09/12/serving-flask-with-nginx-on-ubuntu/
 
 ## Client
 
