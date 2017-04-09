@@ -4,6 +4,8 @@
 ### Install
 `sudo pip install Flask`
 
+`sudo pip install flask-pymongo`
+
 ### Run Server
 ```
 export FLASK_DEBUG=1
@@ -21,7 +23,7 @@ flask run --host=0.0.0.0
 
 (`@note`: change .pem file to 600: `chmod 600 /Users/xinr/Downloads/sapHackathon.pem`)
 
-(`@note`: user name is `root`, not `centos`. stupid aws turotial is wrong at http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/AccessingInstancesLinux.html)
+(`@note`: user name is `root`, not `centos`. aws turotial is wrong at http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/AccessingInstancesLinux.html)
 
 http://flask.pocoo.org/docs/0.12/deploying/#deployment
 
@@ -38,15 +40,18 @@ http://localhost:5000/update?udid=d1&status=closed
 ## MongoDB
 
 ### PyMongo
-`python -m pip install pymongo`
+`sudo python -m pip install pymongo`
 
 https://api.mongodb.com/python/current/tutorial.html
 
 ### MongoDB Server
+`sudo mkdir -p /Users/xinr/Downloads/mongodb/`
+
 `mongod --dbpath /Users/xinr/Downloads/mongodb/`
 
 ### MongDB Query
 ```
+use local
 db.status.insert({'deviceId':'d1', 'status':'open'})
 db.status.insert({'deviceId':'d2', 'status':'occupied'})
 ```
