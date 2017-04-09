@@ -4,14 +4,14 @@
 2. flask server up
 3. mongod up
 
-## Server - Flask
+## Server - Flask & Nginx
 
 ### Install
 `sudo pip install Flask`
 
 `sudo pip install flask-pymongo`
 
-### Run Server
+### Run Server - Flask
 ```
 cd /path/to/code
 export FLASK_DEBUG=1
