@@ -20,10 +20,11 @@ db = client.local
 def hello_world():
     return 'Hello, World'
 
-
+# eg: http://localhost:5000/status?udid=d1
 @app.route('/status')
 def hello():
-	result = db.status.find_one()
+	udid = request.args.get('udid')
+	result = db.status.find_one({"deviceId" : udid})
 	status = result['status']
 	return status
 
