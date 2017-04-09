@@ -75,3 +75,21 @@ db.status.insert({'deviceId':'d2', 'status':'occupied'})
 	"status" : "occupied"
 }
 ```
+
+## Front-End Hookup
+
+### return html file
+1. create a folder called `templates`
+2. and use built-in `render_template`
+```
+def hello(name=None):
+    return render_template('hello.html', name='name')
+```
+
+Ref: http://flask.pocoo.org/docs/0.12/quickstart/#rendering-templates
+
+### for css and js files
+1. need to have a `static` folder setup (for css/js files)
+2. then: `<link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/mainpage.css') }}">`
+
+Ref: http://stackoverflow.com/questions/22259847/application-not-picking-up-css-file-flask-python
