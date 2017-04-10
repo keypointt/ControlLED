@@ -11,7 +11,7 @@ The Raspberry Pi is a series of small single-board computers. https://www.raspbe
 
 ### Device Usage and Workflow
 
-1. Button on/off: following example below. And set up circuit as below: 
+1. LED light on/off button: following example below. And set up circuit as below: 
 https://www.raspberrypi.org/learning/python-quick-reaction-game/worksheet/
 2. implement [call back function](../master/raspberry_pi_trigger.py#L23-L35) when button for LED light on/off
 3. when LED on/off triggered, [a message will be sent](../master/raspberry_pi_trigger.py#L8-L21) to EC2 server (described below)
@@ -112,8 +112,9 @@ db.status.insert({'deviceId':'d2', 'status':'occupied'})
 2. Drag circle to map
 3. click 'Refresh' 
 
-Green: room not occupied
-Red: 
+### Color and Room Status
+* Green circle: room not occupied
+* Red circle: room is occupied
 
 ### Endpoint
 http://ec2-34-209-46-58.us-west-2.compute.amazonaws.com:5000/
