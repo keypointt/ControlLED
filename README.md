@@ -10,9 +10,8 @@ The Raspberry Pi is a series of small single-board computers. https://www.raspbe
 2. LED control example: https://gpiozero.readthedocs.io/en/stable/index.html
 
 ### Device Usage and Workflow
-Button on/off: following example below
 
-1. set up circuit as below: 
+1. Button on/off: following example below. And set up circuit as below: 
 https://www.raspberrypi.org/learning/python-quick-reaction-game/worksheet/
 2. implement [call back function](../master/raspberry_pi_trigger.py#L23-L35) when button for LED light on/off
 3. when LED on/off triggered, [a message will be sent](../master/raspberry_pi_trigger.py#L8-L21) to EC2 server (described below)
