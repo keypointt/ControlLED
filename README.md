@@ -1,4 +1,25 @@
-## Usage
+## IoT scenario
+
+### Device: Raspberry Pi
+The Raspberry Pi is a series of small single-board computers. https://www.raspberrypi.org/
+
+#### API
+
+1. gpiozero: A simple interface to everyday GPIO components used with Raspberry Pi. (https://gpiozero.readthedocs.io/en/stable/index.html)
+
+2. LED control example: https://gpiozero.readthedocs.io/en/stable/index.html
+
+### Device Usage and Workflow
+Button on/off: following example below
+
+1. set up circuit as below: 
+https://www.raspberrypi.org/learning/python-quick-reaction-game/worksheet/
+2. implement call back function when button for LED light on/off
+3. when LED on/off triggered, a message will be sent to EC2 server (described below)
+4. server process request with LED light status
+5. web browser/apps query server for LED light status and display to end user
+
+## Backend Usage
 
 1. ngnix server up
 2. flask server up
@@ -85,6 +106,18 @@ db.status.insert({'deviceId':'d2', 'status':'occupied'})
 ```
 
 ## Front-End Hookup
+
+### Usage
+
+1. click 'Add' to add a green circle
+2. Drag circle to map
+3. click 'Refresh' 
+
+Green: room not occupied
+Red: 
+
+### Endpoint
+http://ec2-34-209-46-58.us-west-2.compute.amazonaws.com:5000/
 
 ### return html file
 1. create a folder called `templates`
