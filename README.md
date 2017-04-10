@@ -14,8 +14,8 @@ Button on/off: following example below
 
 1. set up circuit as below: 
 https://www.raspberrypi.org/learning/python-quick-reaction-game/worksheet/
-2. implement [call back function](../blob/master/raspberry_pi_trigger.py) when button for LED light on/off
-3. when LED on/off triggered, [a message will be sent](../blob/master/raspberry_pi_trigger.py) to EC2 server (described below)
+2. implement [call back function](../master/raspberry_pi_trigger.py) when button for LED light on/off
+3. when LED on/off triggered, [a message will be sent](../master/raspberry_pi_trigger.py) to EC2 server (described below)
 4. [server process](https://github.com/keypointt/ControlLED#server---flask--nginx) request with LED light status
 5. web browser/apps query server for LED light status and [display to end user](https://github.com/keypointt/ControlLED#front-end-hookup)
 
